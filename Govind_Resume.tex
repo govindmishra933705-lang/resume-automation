@@ -1,0 +1,184 @@
+%-------------------------
+% Resume in LaTeX — Govind Mishra
+% Based on Jake's Resume Template
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Govind Mishra} \\ \vspace{1pt}
+    \small
+    \faGithub\ \href{https://github.com/Govind933}{\underline{Govind933}} $|$
+    \faLinkedin\ \href{https://linkedin.com/in/Govind}{\underline{Govind}} $|$
+    \faEnvelope\ \href{mailto:govindmishra933705@gmail.com}{\underline{govindmishra933705@gmail.com}} $|$
+    \faPhone\ +91-8882471667
+\end{center}
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Professional Summary}
+Backend Software Engineer with 1+ year of experience specializing in NestJS, Spring Boot, and PostgreSQL. Proven track record of building enterprise-grade Lead Management Systems (LMS) from scratch, handling 10M+ data rows, and improving database performance by 60\%. Experienced in high-throughput architectures, microservices, and secure API development.
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University School of Information, Communication \& Technology (USICT)}{July 2020 -- July 2024}
+      {Bachelor of Technology in Computer Science and Engineering}{GPA: 8.08/10.0}
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: TypeScript, Java, JavaScript, C++, SQL, PHP, HTML/CSS} \\
+     \textbf{Backend}{: NestJS, Spring Boot, Node.js, Express, REST APIs, Microservices, Socket.io} \\
+     \textbf{Databases}{: PostgreSQL (Materialized Views, CTEs, JSONB), MongoDB, Redis, MySQL, TypeORM} \\
+     \textbf{Tools/Cloud}{: BullMQ, AWS (S3, SES), Firebase, Docker, Git, JWT, RBAC, Redux Toolkit}
+    }}
+ \end{itemize}
+
+%-----------PROFESSIONAL EXPERIENCE-----------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer (Backend)}{Feb 2025 -- Present}
+      {KollegeApply}{Gurgaon, India}
+      \resumeItemListStart
+        \resumeItem{\textbf{Lead Management System (Product built from scratch):} Designed and developed an enterprise LMS using NestJS and TypeScript, supporting high-throughput ingestion of 1,000+ leads/minute with multi-tenant campaigns and secure JWT/API-key authentication.}
+        \resumeItem{\textbf{Scale \& Data Optimization:} Designed a PostgreSQL Materialized View strategy over 10M+ delivery logs with concurrent refresh and hybrid historical/near-real-time exclusion, enabling sub-second lead filtering.}
+        \resumeItem{\textbf{High-Throughput Pipeline:} Built a non-blocking delivery pipeline using BullMQ, Redis, and Lua scripts for atomic pop-and-mark operations, enforcing API rate limits and concurrency across distributed workers.}
+        \resumeItem{\textbf{Compliance \& Communication:} Implemented RBAC, dual approvals, and GDPR-compliant JSONB audit logging; developed SMS/Email modules with DLT templates, scheduling, URL shortening, and pixel-based click/open tracking.}
+        \resumeItem{\textbf{KollegeApply Website \& CMS:} Scaled backend services to support 100,000+ monthly visitors; optimized complex college/exam filtering and improved critical API response times by 60\%.}
+        \resumeItem{\textbf{Modular CMS Architecture:} Architected a modular CMS (25+ modules) enabling non-technical teams to manage content, bulk uploads, URL redirections, and faceted search with full auditability.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Technical Tutor / Code Mentor}{Feb 2024 -- Jan 2025}
+      {Trivium (Tutor.com)}{Remote}
+      \resumeItemListStart
+        \resumeItem{Delivered advanced, chat-based technical mentoring supporting students in C++ and Java with a strong focus on Data Structures \& Algorithms (DSA) and backend fundamentals.}
+        \resumeItem{Diagnosed and resolved complex logical, runtime, and performance issues in student code, simulating real-world debugging workflows used in production engineering teams.}
+        \resumeItem{Strengthened learners' problem-solving, algorithmic thinking, and code optimization skills by breaking down large problems into executable steps rather than providing direct solutions.}
+        \resumeItem{Regularly worked with unstructured or incomplete problem statements, translating requirements into clear, testable logic — mirroring backend requirement analysis.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL PROJECTS-----------
+\section{Technical Projects}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{Video Sharing Platform} $|$ \emph{Spring Boot, React, MongoDB, Firebase}}{Jan 2024 -- Apr 2024}
+      \resumeItemListStart
+        \resumeItem{Built a full-stack video platform with a custom video player; integrated Firebase Storage for large media handling.}
+        \resumeItem{Implemented backend validation, DTO mapping, and global exception handling for robust APIs.}
+        \resumeItem{Optimized MongoDB queries and frontend state using Redux Toolkit, reducing load times by 40\%.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Software Development Cell (SDC), USICT}}{Nov 2021 -- Nov 2023}
+      \resumeItemListStart
+        \resumeItem{Led backend revamp of the university website using PHP and MySQL, supporting 114+ colleges.}
+        \resumeItem{Built a student feedback portal using Angular and MySQL for 5,000+ users.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{1st Place, KollegeApply Internal Hackathon}}{}
+      \resumeItemListStart
+        \resumeItem{Built an AI-powered college recommendation system using NestJS and vector embeddings, evaluated across scalability, accuracy, and real-world applicability.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
