@@ -1,27 +1,17 @@
-name: Compile LaTeX Resume
-
-on:
-  push:
-    paths:
-      - '**.tex'
-
+name: Build Resume PDF
+on: [push]
 jobs:
-  build:
+  build_latex:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Set up Git repository
         uses: actions/checkout@v3
-
-      - name: Compile LaTeX
-        uses: xu-cheng/latex-action@v3
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
         with:
-          root_file: "*.tex"
-          glob_root_file: true
-
-      - name: Commit PDF back to repo
-        run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add *.pdf
-          git diff --staged --quiet || git commit -m "Auto-compiled resume PDF"
-          git push
+          root_file: Govind_Resume.tex
+      - name: Upload PDF Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Resume-PDF
+          path: Govind_Resume.pdf
